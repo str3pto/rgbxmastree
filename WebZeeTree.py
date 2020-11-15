@@ -8,7 +8,7 @@ import cherrypy
 tree = RGBXmasTree()
 
 tree.brightness = 0.1
-timeout = 150
+
 
 
 class Xmas_Tree(object):
@@ -18,8 +18,9 @@ class Xmas_Tree(object):
 			<head></head>
 			<body>
 			<form method="get" action="RGBXhue">
-			  <input type="text" value="8" name="length" />
-			  <button type="submit">Give it now!</button>
+			  <label for="RGBXmashue">HUE:</label><br>
+			  <input type="text" value="red" name="RGBXmashue" />
+			  <button type="submit">GO HUE</button>
 			</form>
 			<form method="get" action="generate">
 			  <input type="text" value="8" name="length" />
@@ -33,18 +34,18 @@ class Xmas_Tree(object):
 		</html>"""
 
 	@cherrypy.expose
-	def RGBXhue():
+	def RGBXhue(RGBXmashue):
+		timeout = 150
 		timeout_start = time.time()
 		tree.brightness = 0.1
 
-		tree.color = Color('red')
+		tree.color = Color(RGBXmashue)
 
-		try:
-			while time.time() < timeout_start + timeout:
+		while time.time() < timeout_start + timeout:
 				tree.color += Hue(deg=1)
-		except KeyboardInterrupt:
+		"""except KeyboardInterrupt:
 			tree.brightness = 0.0
-			tree.close()
+			tree.close()"""
 
 	@cherrypy.expose
 	# starts one by one
@@ -58,9 +59,9 @@ class Xmas_Tree(object):
 				for color in colors:
 					for pixel in tree:
 						pixel.color = color
-		except KeyboardInterrupt:
+		""""except KeyboardInterrupt:
 			tree.brightness = 0.0
-			tree.close()
+			tree.close()"""
 
 
 # starts randomsparkles
