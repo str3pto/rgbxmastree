@@ -58,9 +58,8 @@ class Xmas_Tree(object):
 						pixel.color = color
 
 
-
-# starts randomsparkles
 	@cherrypy.expose
+	# starts randomsparkles
 	def random_lights():
 		timeout_start = time.time()
 		tree.brightness = 0.1
