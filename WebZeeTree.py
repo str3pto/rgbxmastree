@@ -43,6 +43,9 @@ class Xmas_Tree(object):
 
 		while time.time() < timeout_start + timeout:
 				tree.color += Hue(deg=1)
+		"""except KeyboardInterrupt:
+			tree.brightness = 0.0
+			tree.close()"""
 
 	@cherrypy.expose
 	# starts one by one
@@ -56,10 +59,13 @@ class Xmas_Tree(object):
 				for color in colors:
 					for pixel in tree:
 						pixel.color = color
+		except KeyboardInterrupt:
+			tree.brightness = 0.0
+			tree.close()
 
 
-	@cherrypy.expose
 	# starts randomsparkles
+	@cherrypy.expose
 	def random_lights():
 		timeout_start = time.time()
 		tree.brightness = 0.1
