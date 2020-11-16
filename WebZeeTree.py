@@ -8,7 +8,7 @@ import cherrypy
 tree = RGBXmasTree()
 
 tree.brightness = 0.1
-@cherrypy.server.socket_host = '0.0.0.0'
+cherrypy.server.socket_host = '0.0.0.0'
 
 
 class Xmas_Tree(object):
