@@ -12,9 +12,6 @@ cherrypy.server.socket_host = '0.0.0.0'
 
 
 class Xmas_Tree(object):
-	def __init__(self):
-		self.index = index
-
 	@cherrypy.expose
 	def index(self):
 		return """<html>
@@ -36,7 +33,7 @@ class Xmas_Tree(object):
 		  </body>
 		</html>"""
 
-	@cherrypy.expose
+"""	@cherrypy.expose
 	def RGBXhue(RGBXmashue):
 		timeout = 150
 		timeout_start = time.time()
@@ -46,9 +43,6 @@ class Xmas_Tree(object):
 
 		while time.time() < timeout_start + timeout:
 				tree.color += Hue(deg=1)
-		"""except KeyboardInterrupt:
-			tree.brightness = 0.0
-			tree.close()"""
 
 	@cherrypy.expose
 	# starts one by one
@@ -101,7 +95,7 @@ class Xmas_Tree(object):
 					sleep(1)
 		except KeyboardInterrupt:
 			tree.brightness = 0.0
-			tree.close()
+			tree.close()"""
 
 if __name__ == '__main__':
 	cherrypy.quickstart(Xmas_Tree)
