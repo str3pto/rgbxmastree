@@ -59,7 +59,7 @@ class Xmas_Tree(object):
 				for color in colors:
 					for pixel in tree:
 						pixel.color = color
-		""""except KeyboardInterrupt:
+		"""except KeyboardInterrupt:
 			tree.brightness = 0.0
 			tree.close()"""
 
