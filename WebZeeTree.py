@@ -12,6 +12,9 @@ cherrypy.server.socket_host = '0.0.0.0'
 
 
 class Xmas_Tree(object):
+	def __init__(self):
+		self.index = index
+
 	@cherrypy.expose
 	def index(self):
 		return """<html>
