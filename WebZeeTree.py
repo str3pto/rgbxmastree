@@ -59,7 +59,7 @@ class Xmas_Tree(object):
 
 
 
-	# starts randomsparkles
+# starts randomsparkles
 	@cherrypy.expose
 	def random_lights():
 		timeout_start = time.time()
