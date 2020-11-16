@@ -2,22 +2,11 @@
 
 Code examples for the RGB Xmas Tree
 
+This is a custom version with includes a cherrypy webserver, currently WIP
+
 ## Getting started
 
-Start by downloading the xmas tree file. Open a terminal and type:
-
-```bash
-wget https://bit.ly/2Lr9CT3 -O tree.py
-```
-
-Test the tree by running `python3 tree.py` (or running it from an IDE like Mu,
-Thonny or IDLE). All the lights should come on (white).
-
-When you write your own Python code, make sure you keep this file in the same
-folder.
-
-If you're using Raspbian Desktop, you don't need to install anything. If you're
-using Raspbian Lite, you'll need to install gpiozero with:
+If you're using Raspbian Lite, you'll need to install gpiozero with:
 
 ```bash
 sudo apt install python3-gpiozero
