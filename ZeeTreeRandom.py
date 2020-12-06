@@ -7,7 +7,7 @@ from time import sleep
 tree = RGBXmasTree()
 
 tree.brightness = 0.1
-timeout = 20
+timeout = 120
 
 #starts Hue
 def RGBXhue():

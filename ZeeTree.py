@@ -61,7 +61,7 @@ def random_lights():
 def RuBeGe():
 	timeout_start = time.time()
 	tree.brightness = 0.1
-	colors = [Color('red'), Color('green'), Color('blue')] # add more if you like
+	colors = [Color('red'), Color('green'), Color('blue'), Color('purple'), Color('yellow')] # add more if you like
 
 	try:
 	    while time.time() < timeout_start + 10:
